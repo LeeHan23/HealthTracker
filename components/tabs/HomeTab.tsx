@@ -6,6 +6,7 @@ import { Input } from '../ui/input'
 import { Label } from '../ui/label'
 import { Button } from '../ui/button'
 import { Activity } from 'lucide-react'
+import { HealthData } from '../HealthTracker'
 
 interface HomeTabProps {
   healthData: HealthData;

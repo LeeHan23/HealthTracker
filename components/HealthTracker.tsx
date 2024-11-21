@@ -4,17 +4,13 @@
 import { useState, ChangeEvent, FormEvent } from 'react'
 
 // UI Component imports
-import { Tabs, TabsList, TabsTrigger, TabsContent } from './ui/tabs'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card'
-import { Input } from './ui/input'
-import { Label } from './ui/label'
-import { Button } from './ui/button'
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar'
 
 // Icon imports
 import { 
-  Heart, Home, Activity, Settings, ShoppingBag, 
-  Newspaper, Calculator, BarChart, Zap 
+  Heart, Home, ShoppingBag, 
+  Newspaper, Calculator, Settings 
 } from 'lucide-react'
 
 // Tab component imports
@@ -25,7 +21,7 @@ import { CalculatorTab } from './tabs/CalculatorTab'
 import { SettingsTab } from './tabs/SettingsTab'
 
 // Types
-interface HealthData {
+export interface HealthData {
     steps: string;
     calories: string;
     water: string;

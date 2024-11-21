@@ -6,10 +6,10 @@ import { Button } from '../ui/button'
 import { ShoppingBag } from 'lucide-react'
 
 export function StoreTab() {
-  const [cart, setCart] = useState<string[]>([])
+  const _cart = useState<string[]>([])
 
   const addToCart = (productId: string) => {
-    setCart(prev => [...prev, productId])
+    _cart[1](prev => [...prev, productId])
   }
 
   return (
