@@ -3,19 +3,46 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #FFFFFF;
+  --background-accent: #FEFAF7;
+  --primary: #154D57;
+  --secondary: #B7A08B;
+  --text: #000000;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Prevent overscroll bounce */
+html {
+  overflow: hidden;
+  height: 100%;
 }
 
 body {
-  color: var(--foreground);
+  overflow: auto;
+  height: 100%;
+  overscroll-behavior-y: none;
+  color: var(--text);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Improve touch targets */
+button, a {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Prevent text size adjustment */
+* {
+  -webkit-text-size-adjust: none;
 }
